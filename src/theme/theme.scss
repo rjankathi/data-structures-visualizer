@@ -1,0 +1,50 @@
+@import '~@angular/material/_theming.scss';
+@include mat-core();
+@import './material-lime.scss';
+@import './material-lime-dark.scss';
+
+$green: mat-palette($mat-green, A400);
+$light-blue: mat-palette($mat-light-blue, A400);
+$red: mat-palette($mat-red);
+
+$green-color: map-get($mat-green, A400);
+$light-blue-color: map-get($mat-light-blue, A400);
+$red-color: map-get($mat-red, 500);
+
+.primary-color {
+  color: $green-color;
+}
+
+.accent-color {
+  color: $light-blue-color;
+}
+
+.warn-color {
+  color: $red-color;
+}
+
+$default-theme: mat-dark-theme($green, $light-blue);
+@include angular-material-theme($default-theme);
+
+html, body, my-app, .app-panel {
+  overflow: hidden;
+  margin: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.app-body {
+  overflow: auto;
+  height: 100%;
+}
+
+.app-body p {
+  margin: 8px;
+}
+
+app-stack{
+  .mat-app-background {
+    background-color: #111720 !important;
+    color: #11172f !important;
+}
+}

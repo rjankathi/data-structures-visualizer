@@ -1,0 +1,272 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.header{
+    color: white;
+    margin-top: auto;
+    margin-top: -44px;
+    margin-right: 33px;
+    font-family: "Courier New";
+  }
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1b2735;;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity: 0.6;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: springgreen;
+    display: block;
+    transition: 0.3s;font-family: "Courier New";
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  a.closebtn:hover {
+    color: crimson !important;
+  }
+  .open-sidenav{
+    top: 0px;
+    left: 0px;
+    padding: 20px;
+    position: absolute;
+    z-index: 999;
+    opacity: 0.6;
+    font-family: "Courier New";
+    font-size: 30px;
+    color: white;
+  }
+  .sidenav .closebtn {
+    position: absolute;
+    top: -4px;
+    margin-left: 54px;
+    color: crimson;
+    left: 3.2em;
+    font-size: 54px;
+    font-weight: bold;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  #stackdiv {
+    width: 50px;
+    height: 50px;
+    border-radius: 10em;
+    background-color: rgb(129, 246, 134);
+    display: none;
+
+  }
+
+  .stack-selector {
+    width: 50px;
+    height: 50px;
+    border-radius: 10em;
+    background: rgb(129, 246, 134);
+    /*background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(58,194,113,1) 0%,                       rgba(0,212,255,1) 100%);*/
+    position: relative;
+    animation-name: example;
+    animation-duration: 5s;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    display: none;
+    /*animation: colorchange 1s ease 0s 1 normal forwards;*/
+  }
+
+  @keyframes example {
+    0% {
+      left: 0px;
+      top: 0px;
+    }
+
+    25% {
+      background-color: rgb(129, 246, 134);
+      left: 200px;
+      top: 0px;
+    }
+
+    50% {
+      background-color: rgb(129, 246, 134);
+      left: 200px;
+      top: 240px;
+    }
+
+    100% {
+      top: 240px;
+      left: 332px;
+    }
+
+  }
+
+  .header {
+    /* color: white; */
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .blocktext {
+    color: black;
+    font-weight: bold;
+    padding-left: 20px;
+    font-family: Arial;
+    font-size: 11;
+    line-height: 40px;
+    vertical-align: middle;
+  }
+
+  .grid-container {
+    display: grid;
+    grid: auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    width: 100px;
+   
+    border-radius: 10px;
+    margin: 0 auto;
+  }
+
+  .grid-container>div {
+    background-color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+    border-radius: 10px;
+  }
+
+  .stack-btn-group {
+    display: flex;
+  width: 20em;
+  height: 50px;
+  }
+
+  .stack-input {
+    flex: 1;
+    background-color: white;
+    color: black;
+    border: 1px solid #DDDDDD;
+    ;
+    border-radius: 5px 0px 0px 5px;
+    width: 102px;
+  }
+  .stack-btn-container{
+    margin:0 auto;
+  }
+  .stack-btn {
+    background-color: rgb(129, 246, 134);
+    color: black;
+    font-size: 15px;
+    border: 1px solid rgb(40, 44, 52);
+    font-weight: bold;
+
+    width: 88px;
+    /*border-radius: 0px 5px 5px 0px; height: 40px; */
+  }
+
+  .stack-pop-btn {
+    background-color: rgb(246, 129, 129);
+    color: black;
+    font-size: 15px;
+    border: 1px solid rgb(40, 44, 52);
+    font-weight: bold;
+    border-radius: 0px 5px 5px 0px;
+    width: 88px;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+  }
+
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-webkit-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-moz-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+@-ms-keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-webkit-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-moz-keyframes move-clouds-back {
+    from {background-position:0 0;}
+    to {background-position:10000px 0;}
+}
+@-ms-keyframes move-clouds-back {
+    from {background-position: 0;}
+    to {background-position:10000px 0;}
+}
+
+.stars, .twinkling {
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.stars {
+  background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  z-index:0;
+}
+
+.twinkling{
+  background:transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index:1;
+
+  -moz-animation:move-twink-back 200s linear infinite;
+  -ms-animation:move-twink-back 200s linear infinite;
+  -o-animation:move-twink-back 200s linear infinite;
+  -webkit-animation:move-twink-back 200s linear infinite;
+  animation:move-twink-back 200s linear infinite;
+}
+
+.clouds{
+    background:transparent url(http://www.script-tutorials.com/demos/360/images/clouds3.png) repeat top center;
+    z-index:3;
+
+  -moz-animation:move-clouds-back 200s linear infinite;
+  -ms-animation:move-clouds-back 200s linear infinite;
+  -o-animation:move-clouds-back 200s linear infinite;
+  -webkit-animation:move-clouds-back 200s linear infinite;
+  animation:move-clouds-back 200s linear infinite;
+}

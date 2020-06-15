@@ -1,0 +1,160 @@
+ /* .mat-app-background {
+    background-color: #111720;
+    color: #11172f;
+} */
+#stackdiv{
+width: 50px;
+  height: 50px;
+  border-radius:10em;
+  background-color:rgb(129, 246, 134);
+  display:none;
+  position: absolute;
+  color:black;
+  
+}
+
+.stack-selector {
+  width: 50px;
+  height: 50px;
+  border-radius:10em;
+  background:rgb(129, 246, 134);
+  /*background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(58,194,113,1) 0%,                       rgba(0,212,255,1) 100%);*/
+  position: relative;
+  animation-name: example;
+  animation-duration: 5s;
+  animation-delay: 0s;
+  animation-iteration-count:1;
+  display:none;
+  /*animation: colorchange 1s ease 0s 1 normal forwards;*/
+}
+
+@keyframes example {
+  0%  {left:0px; top:0px;}
+  25%  {background-color:rgb(129, 246, 134);left:200px; top:0px;}
+  50%  {background-color:rgb(129, 246, 134);left:200px; top:240px;}
+  100% {top:240px;left:332px;}
+
+}
+ .header {
+    /* color: white; */
+    font-size: 30px;
+    text-align: center;
+    margin: 50px -95px 0px 0;
+    color: white;
+    font-family: "Courier New";
+ }
+
+  .blocktext {
+    color: black;
+    font-weight: bold;
+    padding-left: 20px;
+    font-family: Arial;
+    font-size: 11;
+    line-height: 40px;
+    vertical-align: middle;
+  }
+
+  .grid-container {
+    /* top: 1rem;
+    bottom: 1rem;
+    right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; */
+    grid-gap: 10px;
+     display: grid;
+    justify-items: center;
+
+  }
+
+  .item{
+      /* margin: 1em 0 0;
+      padding: 1em;
+      border-radius: 6px;
+      background: #fff;
+      border: 1px solid #999; */
+
+      padding: 1em;
+      border-radius: 6px;
+      border: 1px solid #999;
+      width: 12em;
+      display: grid;
+  }
+
+  @keyframes MyAnimation {
+    0% {
+      padding-left: 100px;
+    }
+    100% {
+      padding-left: 0px;
+    } 
+  }
+
+.my-animation {
+  animation: MyAnimation 1s;
+}
+
+  .grid-container>div {
+    /* background-color: rgba(0, 0, 0, 0.83);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white; */
+     background-color: rgba(0,0,0,0.87);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+  }
+
+  .stack-btn-group {
+    display: flex;
+  width: 20em;
+  height: 50px;
+  }
+
+  .stack-input {
+    flex: 1;
+    background-color: white;
+    color: white;
+    border: 1px solid #DDDDDD;
+    ;
+    border-radius: 5px 0px 0px 5px;
+    width: 102px;
+  }
+  .stack-btn-container{
+    margin:0 auto;
+  }
+  .stack-btn {
+    background-color: rgb(129, 246, 134);
+    color: black;
+    font-size: 15px;
+    border: 1px solid rgb(40, 44, 52);
+    font-weight: bold;
+
+    width: 88px;
+    /*border-radius: 0px 5px 5px 0px; height: 40px; */
+  }
+
+  .stack-pop-btn {
+    background-color: rgb(246, 129, 129);
+    color: black;
+    font-size: 15px;
+    border: 1px solid rgb(40, 44, 52);
+    font-weight: bold;
+    border-radius: 0px 5px 5px 0px;
+    width: 88px;
+  }
+
+  .container {
+        display: grid;
+    grid-template-columns: 2fr 2fr;
+    position: absolute;
+    top: 100px;
+    transition: 0.5s;
+    padding: 60px;
+  }
+
