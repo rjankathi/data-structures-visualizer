@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="stack-btn-container">
+
+      <div class="stack-btn-group">
+        <mat-form-field>
+        <input matInput required id="stack-input" class="stack-input" placeholder="Enter No to Push">
+        </mat-form-field>
+
+        <button mat-raised-button (click)="push()" class="stack-btn">PUSH</button>
+        <button mat-raised-button (click)="pop()" class="stack-pop-btn">POP</button>
+      </div>
+      
+
+      <div id="stackdiv">
+        <span  #blockText class="blocktext">
+
+        </span>
+      </div>
+    </div>
+
+    <div class="grid-container" [@listAnimation]="stack.length">
+      <ng-container *ngFor="let item of stack.slice().reverse();let i=index">
+         <div [attr.data-index]="i" class="item">{{item}}</div>
+         </ng-container>
+    </div>
+  </div>
