@@ -20,9 +20,10 @@
       </div>
     </div>
 
-    <div class="grid-container" [@listAnimation]="stack.length">
+   
+  </div>
+ <div class="grid-container" [@listAnimation]="stack.length">
       <ng-container *ngFor="let item of stack.slice().reverse();let i=index">
          <div [attr.data-index]="i" class="item">{{item}}</div>
          </ng-container>
     </div>
-  </div>
