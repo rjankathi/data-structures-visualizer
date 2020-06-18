@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChildren, AfterViewInit } from '@angular/core';
+import { Component, OnInit, ViewChildren, AfterViewInit, ViewChild } from '@angular/core';
 import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
 import { DSStack } from './stack';
 @Component({
@@ -41,11 +41,11 @@ export class StackComponent implements OnInit {
   constructor() { }
   stackCls = new DSStack();
   stackInput:any
-  @ViewChildren('blockText') blockText:any;
+  @ViewChild('blockText') blockText:any;
+  @ViewChild('stackInput') stakInput:any;
 
   ngOnInit() {
-    this.createStackSize(5);
-
+    //this.createStackSize(5);
   }
   
   createStackSize(value){
@@ -55,6 +55,8 @@ export class StackComponent implements OnInit {
   push() {
     debugger;
      console.log(this.stack);
+    console.log("offsetLeft: " + this.stakInput.nativeElement.offsetLeft + "<br>offsetTop: " + this.stakInput.nativeElement.offsetTop);
+
     const blockText = document.getElementsByClassName('blocktext')[0];
      this.stackInput = document.getElementById('stack-input');
     const item1 = document.getElementsByClassName('item1')[0];

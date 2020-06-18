@@ -3,8 +3,10 @@
 
       <div class="stack-btn-group">
         <mat-form-field>
-        <input matInput required id="stack-input" class="stack-input" placeholder="Enter No to Push">
+        <input matInput required #stackInput id="stack-input" class="stack-input" placeholder="Enter No to Push">
         </mat-form-field>
+         
+        
 
         <button mat-raised-button (click)="push()" class="stack-btn">PUSH</button>
         <button mat-raised-button (click)="pop()" class="stack-pop-btn">POP</button>

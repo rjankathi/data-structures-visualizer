@@ -3,7 +3,7 @@
     color: #11172f;
 } */
 #stackdiv{
-width: 50px;
+  width: 50px;
   height: 50px;
   border-radius:10em;
   background-color:rgb(129, 246, 134);
@@ -22,18 +22,33 @@ width: 50px;
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(58,194,113,1) 0%,                       rgba(0,212,255,1) 100%);*/
   position: relative;
   animation-name: example;
-  animation-duration: 5s;
-  animation-delay: 0s;
-  animation-iteration-count:1;
+  animation-duration: 10s;
+  animation-iteration-count:infinite;
+  animation-direction:linear;
   display:none;
+  top: 54px;
+    left: 35em;
   /*animation: colorchange 1s ease 0s 1 normal forwards;*/
 }
 
 @keyframes example {
-  0%  {left:0px; top:0px;}
-  25%  {background-color:rgb(129, 246, 134);left:200px; top:0px;}
-  50%  {background-color:rgb(129, 246, 134);left:200px; top:240px;}
-  100% {top:240px;left:332px;}
+/*  
+  0%  {left:35em; top:54px;}
+  25% {left:50em;bottom: -40px;}
+  50%  {left:40em; top:54px;}
+  100% {left:35em;top:54px;} */
+  /* 0% { 
+    top: 54px; left: 35em;
+  }
+  50% { 
+            left: 150em;
+        } 
+  0% { 
+      left: 0; background-color:rgb(129, 246, 134);
+  }  */
+    from { left: 20em;top:54px; }             /* animate from left: 0px */
+    /* to { left: calc(100% - 400px)} */
+    to {left: 70em;opacity: 0.5}
 
 }
  .header {
@@ -65,6 +80,7 @@ width: 50px;
     grid-gap: 10px;
      display: grid;
     justify-items: center;
+    height: 45px;
 
   }
 
@@ -80,8 +96,31 @@ width: 50px;
       border: 1px solid #999;
       width: 12em;
       display: grid;
+    
+      	animation: pulse-green 2s 2;
   }
+  .blob.green {
+	background: rgba(51, 217, 178, 1);
+	box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
+	animation: pulse-green 2s 1;
+}
 
+@keyframes pulse-green {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+	}
+	
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+	}
+}
   @keyframes MyAnimation {
     0% {
       padding-left: 100px;
@@ -147,9 +186,9 @@ width: 50px;
     top: 100px;
     transition: 0.5s;
     padding: 60px; */
-        display: grid;
-    grid-template-columns: 7fr 2fr;
-    position: absolute;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    position: relative;
     top: 150px;
     padding: 60px;
   }
