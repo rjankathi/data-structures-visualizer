@@ -116,6 +116,26 @@
 	box-shadow: 0 0 0 0 rgba(51, 217, 178, 1);
 	animation: pulse-green 2s 1;
 }
+/* .pointer{
+	animation: pulse-pointer 2s 2;
+} */
+ 
+ @keyframes pulse-pointer {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(51, 217, 178, 0.7);
+	}
+	
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(51, 217, 178, 0);
+	}
+	
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(51, 217, 178, 0);
+	}
+}
 
 @keyframes pulse-green {
 	0% {
@@ -217,4 +237,55 @@
     top: 50%;*/
     
   }
+.arrow {
+    color: #00e676 !important;
+    position: absolute;
+    top: 15%;
+    right: -4%;
+    animation: fadeInRight 2s 1;
+    font-size: 68px !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
+.top{
+    font-size: 80px;
+    color: #00e676;
+    position: absolute;
+    top: 34%;
+    right: 13%;
+    animation: fadeInRight 2s 1;
+}
+.top-text {
+    font-size: 20px;
+    color: rgb(250, 235, 135) !important;
+    position: absolute;
+    top: 24%;
+    right: -1%;
+    font-weight: bold;
+    font-family: "Courier New";
+    animation: fadeInRight 2s 1;
+    background-color: rgba(0, 0, 0, 0) !important;
+}
 
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+/* .four {
+-webkit-animation-delay: 3.3s;
+-moz-animation-delay: 3.3s;
+animation-delay: 3.3s;
+} */

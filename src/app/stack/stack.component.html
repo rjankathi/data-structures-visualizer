@@ -25,5 +25,17 @@
  <div class="grid-container" [@listAnimation]="stack.length">
       <ng-container *ngFor="let item of stack.slice().reverse();let i=index">
          <div [attr.data-index]="i" class="item">{{item}}</div>
+         <div class="top-text">Top</div>
+          <div class="arrow">←</div>
+          <!-- <div class="fadeInRight">
+              <div class="top-text">Top</div>
+              <div class="top">←</div>
+          </div> -->
          </ng-container>
     </div>
+    <!-- <div class="top">&#8594;</div> -->
+    <!-- <div class="fadeInRight">
+      <div class="top-text">Top</div>
+      <div class="top">←</div>
+    </div> -->
+    <!-- <div class="top">⇦</div> -->
